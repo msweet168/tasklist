@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="TaskCell" customModule="Tasklist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-mU-qbf">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="62"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3j5-VX-Yx0">
+                                <rect key="frame" x="20" y="16.5" width="30" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8jz-f4-dg0"/>
+                                    <constraint firstAttribute="height" constant="30" id="SUr-fG-l7y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgu-5t-gOh">
+                                <rect key="frame" x="68" y="6" width="256" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="39F-kJ-C3A"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.65103109469999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="SFProRounded-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3j5-VX-Yx0" firstAttribute="leading" secondItem="bPU-mU-qbf" secondAttribute="leading" constant="20" symbolic="YES" id="TVr-md-wy4"/>
+                            <constraint firstItem="bgu-5t-gOh" firstAttribute="leading" secondItem="3j5-VX-Yx0" secondAttribute="trailing" constant="18" id="aEl-U1-dga"/>
+                            <constraint firstItem="bgu-5t-gOh" firstAttribute="centerY" secondItem="bPU-mU-qbf" secondAttribute="centerY" id="dec-Yr-SCh"/>
+                            <constraint firstAttribute="trailing" secondItem="bgu-5t-gOh" secondAttribute="trailing" constant="20" symbolic="YES" id="iEh-q8-uul"/>
+                            <constraint firstItem="3j5-VX-Yx0" firstAttribute="centerY" secondItem="bPU-mU-qbf" secondAttribute="centerY" id="l4J-1I-mif"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bPU-mU-qbf" secondAttribute="bottom" id="4mb-6H-lgE"/>
+                    <constraint firstItem="bPU-mU-qbf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="52O-Mj-oIP"/>
+                    <constraint firstItem="bPU-mU-qbf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pjq-pC-SLp"/>
+                    <constraint firstAttribute="trailing" secondItem="bPU-mU-qbf" secondAttribute="trailing" id="WAo-SF-hXh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="4mb-6H-lgE" id="pZq-j6-A16"/>
+                <outlet property="completedImageView" destination="3j5-VX-Yx0" id="Pqk-eX-b6k"/>
+                <outlet property="leftConstraint" destination="Pjq-pC-SLp" id="7IH-YT-7T4"/>
+                <outlet property="mainView" destination="bPU-mU-qbf" id="jo5-ZW-7Zz"/>
+                <outlet property="rightConstraint" destination="WAo-SF-hXh" id="HBd-kg-AzL"/>
+                <outlet property="taskTextLabel" destination="bgu-5t-gOh" id="2MM-vq-lkE"/>
+                <outlet property="topConstraint" destination="52O-Mj-oIP" id="RfC-Fa-XCc"/>
+            </connections>
+            <point key="canvasLocation" x="157.97101449275362" y="132.58928571428572"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
